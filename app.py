@@ -30,7 +30,7 @@ def clean(filename):
 
 
 @app.route('/', methods=['GET', 'POST'])
-def index():Ну
+def index():
     form = InputForm()
     if form.validate_on_submit():             # Get variable by input form
         full_name = form.full_name.data
