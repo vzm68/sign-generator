@@ -1,6 +1,6 @@
 #############################################
-# Mail Sign Generator for BETER Live
-# Was created: 11.08.2023, by Vitalii Zabrodskyi
+# Mail Sign Generator
+# Was created: 11.08.2023
 # Beta version: 0.0.1
 #############################################
 from flask import Flask, render_template
@@ -10,10 +10,10 @@ from wtforms import StringField, SubmitField, EmailField
 from wtforms.validators import InputRequired
 from string import Template
 
-from os import remove
+#from os import remove
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '2281488'
+app.config['SECRET_KEY'] = 'secretkey'
 
 
 class InputForm(FlaskForm):                  # Determine the form
@@ -25,7 +25,8 @@ class InputForm(FlaskForm):                  # Determine the form
 
 
 def clean(filename):
-    remove("templates/results/filename")
+    pass
+    #remove("templates/results/filename")
 
 
 @app.route('/', methods=['GET', 'POST'])
